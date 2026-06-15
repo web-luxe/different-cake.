@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Different Cake | Cake Designer — Saudi Arabia</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cairo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  /* ============ ROOT / TOKENS ============ */
+  :root{
+    --ivory:#FAF7F3;
+    --cream:#F3ECE6;
+    --blush:#D2A999;
+    --rose:#B9857C;
+    --nude:#E8D4CA;
+    --charcoal:#3F4545;
+    --gold:#C8A46B;
+
+    --font-display:'Playfair Display', serif;
+    --font-heading:'Cormorant Garamond', serif;
+    --font-script:'Great Vibes', cursive;
+    --font-body:'Montserrat', sans-serif;
+    --font-ar:'Cairo', sans-serif;
+
+    --transition-soft: 0.6s cubic-bezier(.4,0,.2,1);
+  }
+
+  *{margin:0; padding:0; box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family: var(--font-body);
+    background: var(--ivory);
+    color: var(--charcoal);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  img{display:block; max-width:100%; height:auto;}
+
+  .ar{font-family: var(--font-ar); direction:rtl;}
+
+  /* ============ SCROLL REVEAL ============ */
+  .reveal{
+    opacity:0;
+    transform: translateY(28px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .reveal.visible{
+    opacity:1;
+    transform: translateY(0);
+  }
+
+  /* ============ TOP BAR ============ */
+  .topbar{
+    position: sticky;
+    top:0;
+    z-index:1000;
+    background: var(--blush);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 16px 24px;
+    position:relative;
+  }
+  .topbar .hamburger{
+    position:absolute;
+    left:24px;
+    top:50%;
+    transform: translateY(-50%);
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    letter-spacing:1px;
+  }
+  .topbar .menu-label{
+    color:#fff;
+    font-family: var(--font-body);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight:500;
+    text-transform: uppercase;
+  }
+
+  /* ============ MOBILE NAV DRAWER ============ */
+  .nav-drawer{
+    position: fixed;
+    top:0; left:0;
+    width: 78%;
+    max-width: 320px;
+    height:100%;
+    background: var(--ivory);
+    z-index: 1100;
+    transform: translateX(-100%);
+    transition: transform var(--transition-soft);
+    box-shadow: 6px 0 30px rgba(0,0,0,0.08);
+    padding: 40px 32px;
+  }
+  .nav-drawer.open{
+    transform: translateX(0);
+  }
+  .nav-drawer .close-btn{
+    background:none;
+    border:none;
+    font-size:22px;
+    color: var(--charcoal);
+    cursor:pointer;
+    margin-bottom: 40px;
+  }
+  .nav-drawer ul{
+    list-style:none;
+  }
+  .nav-drawer li{
+    margin-bottom: 22px;
+  }
+  .nav-drawer a{
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--charcoal);
+    text-decoration:none;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  .nav-drawer a:hover{
+    color: var(--rose);
+  }
+  .nav-overlay{
+    position:fixed;
+    inset:0;
+    background: rgba(63,69,69,0.35);
+    z-index:1050;
+    opacity:0;
+    visibility:hidden;
+    transition: opacity 0.4s ease;
+  }
+  .nav-overlay.open{
+    opacity:1;
+    visibility:visible;
+  }
+
+  /* ============ LOGO SECTION ============ */
+
+.logo-section{
+    background: var(--ivory);
+    text-align: center;
+    padding: 20px 24px 30px;
+}
+
+.logo-section img{
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+    filter: contrast(1.15) saturate(1.25);
+}
+
+.logo-section h1{
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--charcoal);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.logo-section p{
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-style: italic;
+    color: var(--rose);
+    letter-spacing: 2px;
+    margin-top: 0;
+    text-transform: lowercase;
+}
+
+
+  /* ============ HERO ============ */
+  .hero{
+    position: relative;
+    width: 100%;
+    min-height: 78vh;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .hero img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    filter: brightness(1.05) contrast(0.97) saturate(0.95);
+    transform: scale(1.02);
+  }
+  .hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: linear-gradient(to bottom, rgba(250,247,243,0.05) 0%, rgba(250,247,243,0.55) 100%);
+  }
+  .hero-content{
+    position: relative;
+    z-index:2;
+    width:100%;
+    text-align:center;
+    padding: 0 24px 56px;
+  }
+  .hero-content h2{
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight:500;
+    color: var(--charcoal);
+    line-height:1.3;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 18px rgba(255,255,255,0.6);
+  }
+  .hero-content .ar-line{
+    font-size: 17px;
+    color: var(--rose);
+    margin-bottom: 26px;
+    font-weight:500;
+    text-shadow: 0 2px 14px rgba(255,255,255,0.6);
+  }
+  .btn-whatsapp{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background: var(--blush);
+    color:#fff;
+    padding: 15px 34px;
+    border-radius: 50px;
+    text-decoration:none;
+    font-family: var(--font-body);
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight:500;
+    box-shadow: 0 10px 30px rgba(185,133,124,0.35);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  }
+  .btn-whatsapp:hover{
+    background: var(--rose);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(185,133,124,0.45);
+  }
+
+  /* ============ SIGNATURE PHRASE ============ */
+  .signature{
+    background: var(--ivory);
+    text-align:center;
+    padding: 70px 24px;
+  }
+  .signature h3{
+    font-family: var(--font-script);
+    font-size: 48px;
+    color: var(--rose);
+    font-weight:400;
+    margin-bottom: 14px;
+  }
+  .signature p{
+    font-size: 15px;
+    color: var(--charcoal);
+    opacity:0.75;
+  }
+
+  /* ============ ACCORDION CARDS ============ */
+  .menu-section{
+    padding: 20px 16px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .acc-card{
+    position: relative;
+    border-radius: 18px;
+    overflow:hidden;
+    margin-bottom: 20px;
+    cursor:pointer;
+    min-height: 180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 12px 30px rgba(63,69,69,0.08);
+  }
+  .acc-card .bg-img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter: brightness(1.05) saturate(0.9);
+    transition: transform 0.8s ease;
+  }
+  .acc-card:hover .bg-img{
+    transform: scale(1.06);
+  }
+  .acc-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: linear-gradient(to bottom, rgba(250,247,243,0.15), rgba(63,69,69,0.28));
+  }
+  .acc-card .label-box{
+    position: relative;
+    z-index:2;
+    background: rgba(255,255,255,0.92);
+    padding: 22px 36px;
+    border-radius: 14px;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    gap: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+  }
+  .acc-card:hover .label-box{
+    transform: translateY(-2px);
+  }
+  .acc-card .label-box i.fa-icon{
+    font-size: 20px;
+    color: var(--rose);
+  }
+  .acc-card .label-box .text-wrap{
+    text-align:center;
+  }
+  .acc-card .dots{
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--blush);
+    text-transform: uppercase;
+    display:block;
+    margin-bottom: 4px;
+  }
+  .acc-card .title{
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--charcoal);
+    font-weight:500;
+    letter-spacing: 1px;
+  }
+  .acc-card .arrow{
+    font-size:16px;
+    color: var(--rose);
+    transition: transform 0.4s ease;
+  }
+  .acc-card.active .arrow{
+    transform: rotate(90deg);
+  }
+
+  /* Accordion panel */
+  .acc-panel{
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height var(--transition-soft), opacity var(--transition-soft);
+    opacity:0;
+    background: var(--cream);
+    border-radius: 0 0 18px 18px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  .acc-panel.open{
+    opacity:1;
+  }
+  .acc-panel-inner{
+    padding: 36px 22px;
+  }
+
+  /* Section small headings */
+  .panel-heading{
+    text-align:center;
+    margin-bottom: 30px;
+  }
+  .panel-heading .eng{
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--charcoal);
+    font-weight:500;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .panel-heading .ar{
+    font-size: 15px;
+    color: var(--rose);
+    font-weight:500;
+  }
+
+  /* ============ PORTFOLIO GRID ============ */
+  .portfolio-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .portfolio-grid img{
+    width:100%;
+    height: 150px;
+    object-fit:cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(63,69,69,0.08);
+    filter: brightness(1.04) contrast(0.98);
+    transition: transform 0.6s ease, filter 0.6s ease;
+  }
+  .portfolio-grid img:hover{
+    transform: scale(1.04);
+    filter: brightness(1.08) contrast(1);
+  }
+  .btn-outline{
+    display:flex;
+    justify-content:center;
+  }
+  .btn-outline a{
+    border: 1px solid var(--rose);
+    color: var(--rose);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration:none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight:500;
+    transition: all 0.35s ease;
+  }
+  .btn-outline a:hover{
+    background: var(--rose);
+    color:#fff;
+  }
+
+  /* ============ FLAVORS ============ */
+  .flavor-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .flavor-card{
+    background: var(--ivory);
+    border: 1px solid var(--nude);
+    border-radius: 14px;
+    padding: 26px 14px;
+    text-align:center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .flavor-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(63,69,69,0.08);
+  }
+  .flavor-card i{
+    font-size: 26px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display:block;
+  }
+  .flavor-card span{
+    font-family: var(--font-heading);
+    font-size: 17px;
+    color: var(--charcoal);
+    font-weight:500;
+  }
+  .flavor-note{
+    text-align:center;
+    margin-top: 26px;
+    font-size: 14px;
+    color: var(--rose);
+  }
+
+  /* ============ INQUIRE FORM ============ */
+  .inquiry-form{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media(min-width: 768px){
+    .inquiry-form{
+      grid-template-columns: 1fr 1fr;
+    }
+    .inquiry-form .full-width{
+      grid-column: 1 / -1;
+    }
+  }
+  .form-group{
+    display:flex;
+    flex-direction:column;
+  }
+  .form-group label{
+    font-size: 13px;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    font-weight:500;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea{
+    border: 1px solid var(--nude);
+    background: var(--ivory);
+    border-radius: 10px;
+    padding: 13px 16px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--charcoal);
+    outline:none;
+    transition: border-color 0.3s ease;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus{
+    border-color: var(--rose);
+  }
+  .form-group textarea{
+    resize: vertical;
+    min-height: 110px;
+  }
+  .form-submit{
+    margin-top: 8px;
+    text-align:center;
+  }
+  .form-submit button{
+    background: var(--blush);
+    color:#fff;
+    border:none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight:500;
+    letter-spacing: 1px;
+    cursor:pointer;
+    box-shadow: 0 10px 26px rgba(185,133,124,0.3);
+    transition: all 0.35s ease;
+  }
+  .form-submit button:hover{
+    background: var(--rose);
+    transform: translateY(-2px);
+  }
+
+  /* ============ REVIEWS ============ */
+  .reviews-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  @media(min-width:768px){
+    .reviews-grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .review-card{
+    background: var(--ivory);
+    border: 1px solid var(--nude);
+    border-radius: 16px;
+    padding: 30px 22px;
+    position:relative;
+    text-align:center;
+  }
+  .review-card .quote-mark{
+    font-family: var(--font-script);
+    font-size: 50px;
+    color: var(--blush);
+    line-height: 1;
+    display:block;
+    margin-bottom: 10px;
+  }
+  .review-card p{
+    font-size: 14px;
+    color: var(--charcoal);
+    font-style: italic;
+    line-height: 1.7;
+  }
+  .review-card.ar-card p{
+    font-family: var(--font-ar);
+    direction: rtl;
+    font-style: normal;
+  }
+
+  /* ============ BOOKING CTA ============ */
+  .booking-cta{
+    position: relative;
+    min-height: 56vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    margin: 20px 0 0;
+  }
+  .booking-cta img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter: brightness(1.02) saturate(0.92);
+  }
+  .booking-cta::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: rgba(250,247,243,0.55);
+  }
+  .booking-content{
+    position:relative;
+    z-index:2;
+    padding: 0 24px;
+  }
+  .booking-content h3{
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--charcoal);
+    font-weight:500;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .booking-content .ar{
+    font-size: 16px;
+    color: var(--rose);
+    margin-bottom: 24px;
+    font-weight:500;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 56px 24px 28px;
+    text-align:center;
+  }
+  footer .footer-logo{
+    font-family: var(--font-display);
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  footer .footer-location{
+    font-size: 13px;
+    color: var(--blush);
+    margin-bottom: 36px;
+    letter-spacing: 1px;
+  }
+  .footer-divider{
+    width: 60px;
+    height: 1px;
+    background: var(--blush);
+    margin: 0 auto 36px;
+  }
+  .footer-cols{
+    display:flex;
+    flex-direction:column;
+    gap: 32px;
+    margin-bottom: 36px;
+  }
+  @media(min-width:600px){
+    .footer-cols{
+      flex-direction:row;
+      justify-content:center;
+      gap: 80px;
+    }
+  }
+  .footer-cols h4{
+    font-family: var(--font-heading);
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .footer-cols ul{
+    list-style:none;
+  }
+  .footer-cols li{
+    margin-bottom: 8px;
+  }
+  .footer-cols a{
+    color: var(--cream);
+    text-decoration:none;
+    font-size: 13px;
+    opacity:0.85;
+    transition: opacity 0.3s ease;
+  }
+  .footer-cols a:hover{
+    opacity:1;
+    color: var(--blush);
+  }
+  .footer-bottom{
+    font-size: 12px;
+    color: rgba(243,236,230,0.5);
+    letter-spacing: 1px;
+  }
+
+  /* ============ DESKTOP OVERRIDES ============ */
+  @media(min-width: 992px){
+    .logo-section h1{ font-size: 40px; }
+    .hero{ min-height: 88vh; }
+    .hero-content h2{ font-size: 48px; }
+    .hero-content .ar-line{ font-size: 20px; }
+    .signature h3{ font-size: 60px; }
+
+    .acc-card{ min-height: 240px; }
+    .portfolio-grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio-grid img{ height: 220px; }
+
+    .flavor-grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .booking-cta{ min-height: 64vh; }
+    .booking-content h3{ font-size: 38px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  <span class="menu-label">MENU</span>
+</div>
+
+<!-- ============ NAV DRAWER ============ -->
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <button class="close-btn" id="closeNav" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <ul>
+    <li><a href="#portfolio-card" class="nav-link">Portfolio</a></li>
+    <li><a href="#flavors-card" class="nav-link">Flavors</a></li>
+    <li><a href="#inquire-card" class="nav-link">Inquire</a></li>
+    <li><a href="#reviews-card" class="nav-link">Reviews</a></li>
+  </ul>
+</nav>
+
+<!-- ============ LOGO SECTION ============ -->
+<section class="logo-section reveal">
+  <img src="images/logo.png" alt="Different Cake Logo">
+  <h1>Different Cake</h1>
+  <p>cake design</p>
+</section>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero">
+  <img src="images/hero-01.jpg" alt="Luxury cake by Different Cake">
+  <div class="hero-content reveal">
+    <h2>Let's make your dream cake.</h2>
+    <p class="ar-line ar">كيكة تُصنع لأجمل لحظاتكم</p>
+    <a href="https://wsend.co/966577868726" class="btn-whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Inquire on WhatsApp / طلب عبر واتساب</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE PHRASE ============ -->
+<section class="signature reveal">
+  <h3>Let's make your dream cake.</h3>
+  <p class="ar">لحظاتكم تستحق تصميماً خاصاً</p>
+</section>
+
+<!-- ============ ACCORDION MENU ============ -->
+<section class="menu-section">
+
+  <!-- PORTFOLIO -->
+  <div class="acc-card reveal" id="portfolio-card" data-target="portfolio-panel">
+    <img src="images/portfolio-01.jpg" alt="Portfolio" class="bg-img">
+    <div class="label-box">
+      <i class="fa-solid fa-images fa-icon"></i>
+      <div class="text-wrap">
+        <span class="dots">• PORTFOLIO •</span>
+        <span class="title">Portfolio</span>
+      </div>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </div>
+  </div>
+  <div class="acc-panel" id="portfolio-panel">
+    <div class="acc-panel-inner">
+      <div class="panel-heading">
+        <div class="eng">Our Portfolio</div>
+        <div class="ar">بعض من أعمالنا</div>
+      </div>
+      <div class="portfolio-grid">
+        <img src="images/portfolio-01.jpg" alt="Cake design 1">
+        <img src="images/portfolio-02.jpg" alt="Cake design 2">
+        <img src="images/portfolio-03.jpg" alt="Cake design 3">
+        <img src="images/portfolio-04.jpg" alt="Cake design 4">
+        <img src="images/portfolio-05.jpg" alt="Cake design 5">
+        <img src="images/portfolio-06.jpg" alt="Cake design 6">
+      </div>
+      <div class="btn-outline">
+        <a href="https://instagram.com" target="_blank">View more on Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLAVORS -->
+  <div class="acc-card reveal" id="flavors-card" data-target="flavors-panel">
+    <img src="images/portfolio-02.jpg" alt="Flavors" class="bg-img">
+    <div class="label-box">
+      <i class="fa-solid fa-cake-candles fa-icon"></i>
+      <div class="text-wrap">
+        <span class="dots">• FLAVORS •</span>
+        <span class="title">Flavors</span>
+      </div>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </div>
+  </div>
+  <div class="acc-panel" id="flavors-panel">
+    <div class="acc-panel-inner">
+      <div class="panel-heading">
+        <div class="eng">Our Flavors</div>
+      </div>
+      <div class="flavor-grid">
+        <div class="flavor-card"><i class="fa-solid fa-leaf"></i><span>Vanilla</span></div>
+        <div class="flavor-card"><i class="fa-solid fa-mug-hot"></i><span>Chocolate</span></div>
+        <div class="flavor-card"><i class="fa-solid fa-seedling"></i><span>Pistachio</span></div>
+        <div class="flavor-card"><i class="fa-solid fa-spa"></i><span>Rose</span></div>
+        <div class="flavor-card"><i class="fa-solid fa-heart"></i><span>Red Velvet</span></div>
+        <div class="flavor-card"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Special Custom Flavor</span></div>
+      </div>
+      <div class="flavor-note ar">نكهات مختارة بعناية</div>
+    </div>
+  </div>
+
+  <!-- INQUIRE -->
+  <div class="acc-card reveal" id="inquire-card" data-target="inquire-panel">
+    <img src="images/portfolio-03.jpg" alt="Inquire" class="bg-img">
+    <div class="label-box">
+      <i class="fa-solid fa-envelope-open-text fa-icon"></i>
+      <div class="text-wrap">
+        <span class="dots">• INQUIRE •</span>
+        <span class="title">Inquire</span>
+      </div>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </div>
+  </div>
+  <div class="acc-panel" id="inquire-panel">
+    <div class="acc-panel-inner">
+      <div class="panel-heading">
+        <div class="eng">Let's Plan Your Cake</div>
+        <div class="ar">أخبرونا عن مناسبتكم</div>
+      </div>
+      <form class="inquiry-form" id="inquiryForm">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="eventDate">Event Date *</label>
+          <input type="date" id="eventDate" name="eventDate" required>
+        </div>
+        <div class="form-group">
+          <label for="eventType">Event Type *</label>
+          <select id="eventType" name="eventType" required>
+            <option value="" disabled selected>Select event type</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Engagement">Engagement</option>
+            <option value="Baby Shower">Baby Shower</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="guestCount">Guest Count *</label>
+          <input type="number" id="guestCount" name="guestCount" min="1" required>
+        </div>
+        <div class="form-group full-width">
+          <label for="message">Message / Inspiration *</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your dream cake..."></textarea>
+        </div>
+        <div class="form-submit full-width">
+          <button type="submit">
+            <i class="fa-brands fa-whatsapp"></i>&nbsp; Send via WhatsApp / إرسال عبر واتساب
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="acc-card reveal" id="reviews-card" data-target="reviews-panel">
+    <img src="images/portfolio-04.jpg" alt="Reviews" class="bg-img">
+    <div class="label-box">
+      <i class="fa-solid fa-star fa-icon"></i>
+      <div class="text-wrap">
+        <span class="dots">• REVIEWS •</span>
+        <span class="title">Reviews</span>
+      </div>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </div>
+  </div>
+  <div class="acc-panel" id="reviews-panel">
+    <div class="acc-panel-inner">
+      <div class="panel-heading">
+        <div class="eng">Sweet words from our clients</div>
+        <div class="ar">آراء عملائنا</div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <span class="quote-mark">"</span>
+          <p>The cake was elegant, beautiful, and made our moment unforgettable.</p>
+        </div>
+        <div class="review-card ar-card">
+          <span class="quote-mark">"</span>
+          <p>تصميم راقٍ وطعم رائع، شكراً Different Cake.</p>
+        </div>
+        <div class="review-card">
+          <span class="quote-mark">"</span>
+          <p>Everything was perfect, from the design to the smallest detail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ BOOKING CTA ============ -->
+<section class="booking-cta reveal">
+  <img src="images/booking-bg.jpg" alt="Booking background">
+  <div class="booking-content">
+    <h3>Booking for weddings, events &amp; special moments</h3>
+    <p class="ar">نصمم كيكات فاخرة لمناسباتكم الخاصة</p>
+    <a href="https://wsend.co/966577868726" class="btn-whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Inquire on WhatsApp</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-logo">Different Cake</div>
+  <div class="footer-location">Saudi Arabia</div>
+  <div class="footer-divider"></div>
+  <div class="footer-cols">
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#portfolio-card">Portfolio</a></li>
+        <li><a href="#flavors-card">Flavors</a></li>
+        <li><a href="#inquire-card">Inquire</a></li>
+        <li><a href="#reviews-card">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://wsend.co/966577868726" target="_blank"><i class="fa-brands fa-whatsapp"></i>&nbsp; WhatsApp</a></li>
+        <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>&nbsp; Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Different Cake — All rights reserved.</div>
+</footer>
+
+<script>
+  // ===== Mobile Nav Drawer =====
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const closeNav = document.getElementById('closeNav');
+  const navDrawer = document.getElementById('navDrawer');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function openNav(){
+    navDrawer.classList.add('open');
+    navOverlay.classList.add('open');
+  }
+  function closeNavDrawer(){
+    navDrawer.classList.remove('open');
+    navOverlay.classList.remove('open');
+  }
+
+  hamburgerBtn.addEventListener('click', openNav);
+  closeNav.addEventListener('click', closeNavDrawer);
+  navOverlay.addEventListener('click', closeNavDrawer);
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', closeNavDrawer);
+  });
+
+  // ===== Accordion Logic (only one open at a time) =====
+  const cards = document.querySelectorAll('.acc-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const targetId = card.getAttribute('data-target');
+      const panel = document.getElementById(targetId);
+      const isOpen = panel.classList.contains('open');
+
+      // Close all panels first
+      document.querySelectorAll('.acc-panel').forEach(p => {
+        p.classList.remove('open');
+        p.style.maxHeight = null;
+      });
+      document.querySelectorAll('.acc-card').forEach(c => c.classList.remove('active'));
+
+      // If it wasn't open, open it now
+      if(!isOpen){
+        panel.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        card.classList.add('active');
+      }
+    });
+  });
+
+  // Recalculate open panel height on resize (responsive content reflow)
+  window.addEventListener('resize', () => {
+    const openPanel = document.querySelector('.acc-panel.open');
+    if(openPanel){
+      openPanel.style.maxHeight = openPanel.scrollHeight + "px";
+    }
+  });
+
+  // ===== Scroll Reveal Animation =====
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ===== WhatsApp Inquiry Form =====
+  const inquiryForm = document.getElementById('inquiryForm');
+
+  inquiryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const fullName = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const eventDate = document.getElementById('eventDate').value;
+    const eventType = document.getElementById('eventType').value;
+    const guestCount = document.getElementById('guestCount').value;
+    const message = document.getElementById('message').value.trim();
+
+    const text =
+`Hello Different Cake, I would like to inquire about a cake.
+Name: ${fullName}
+Phone: ${phone}
+Event Date: ${eventDate}
+Event Type: ${eventType}
+Guest Count: ${guestCount}
+Message: ${message}`;
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappURL = `https://wsend.co/966577868726?text=${encodedText}`;
+
+    window.open(whatsappURL, '_blank');
+  });
+</script>
+
+</body>
+</html>
